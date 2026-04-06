@@ -1,107 +1,127 @@
-! Title: IRUDINI Custom Blocklist
-! Description: Blokir iklan operator dan pelacak pribadi
+! Title: IRUDINI DNS filter
+! Description: Daftar blokir kustom untuk ISP dan privasi di Indonesia.
 ! Checkperiod: 1d
-! Version: 1.0.0
+! Version: 1.0.2
 
-! --- TELKOMSEL ADVANCED ---
+! ================================
+! TELKOMSEL – ADS + TRACKING + PROMO
+! ================================
 ||ads.telkomsel.com^
-||tenads.id^
-||tsel.me^
-||api-ads.telkomsel.com^
+||ads-api.telkomsel.com^
 ||ads-marketing.telkomsel.com^
 ||mads.telkomsel.com^
 ||pro-ads.telkomsel.com^
-||tdwidp.telkomsel.com^
-||telkomsel-display.adadapter.adform.net^
-! --- Telkomsel Extra Stealth & Tracking ---
-||ads-api.telkomsel.com^
-||api-ads.tsel.id^
-||marketing.telkomsel.com^
-||offers.telkomsel.com^
-||promos.telkomsel.com^
+||tenads.id^
+||tsel.me^
 ||v.tsel.me^
-! --- Telkomsel Telemetry & Monitoring ---
-||log.telkomsel.com^
-||monitoring.telkomsel.com^
-||telemetry.telkomsel.com^
-! --- Telkomsel Advanced Analytics & Support ---
-||analytics.telkomsel.com^
-||api-tsel.telkomsel.com^
 ||api.tsel.id^
+||api-tsel.telkomsel.com^
+||telkomsel-display.adadapter.adform.net^
+||tracking.telkomsel.com^
+||analytics.telkomsel.com^
+||log.telkomsel.com^
+||event.telkomsel.com^
 ||campaign.telkomsel.com^
 ||discovery.telkomsel.com^
-||event.telkomsel.com^
-! --- Third-Party Ad-Tech for Telkomsel ---
-||appier.net^
-||adjust.com^
-||adjust.io^
-! --- Telkomsel Redirection & Login ---
-||login.telkomsel.com^
-||my.telkomsel.com^$app=com.telkomsel.telkomselcm
-||wsi.telkomsel.com^
-! --- Tambahan Anti-Iklan MyTelkomsel ---
-||api-tsel.telkomsel.com^
-||api.tsel.id^
-||life.telkomsel.com^
-||res.mytelkomsel.com^
-||api.mytelkomsel.com^
-! --- Telkomsel Additional Backend ---
-||api-portal.telkomsel.com^
-||apigw.telkomsel.com^
-||tracking.telkomsel.com^
-! --- Anti-DNS Bypass ---
-||dns.telkomsel.id^
+||offers.telkomsel.com^
+||promos.telkomsel.com^
+||tdwidp.telkomsel.com^
 
-! --- INDOSAT / IOH EXTENDED ---
+! ================================
+! by.U – ADS + TRACKING + PROMO
+! ================================
+||ads.byu.id^
+||p-ads.byu.id^
+||web-ads.byu.id^
+||tracking.byu.id^
+||analytics.byu.id^
+||log.byu.id^
+||event.byu.id^
+||discover.byu.id^
+||campaign.byu.id^
+||offers.byu.id^
+||promo.byu.id^
+
+! ================================
+! INDOSAT / IOH – ADS + TRACKING + PROMO
+! ================================
 ||ads.indosatooredoo.com^
 ||ads.im3.id^
-||p-ads.indosatooredoo.com^
-||analytics.indosatooredoo.com^
-||tracking.indosatooredoo.com^
-||doubleclick.indosatooredoo.com^
-! --- Tambahan untuk aplikasi myIM3 & In-app promo ---
 ||api.ads.im3.id^
-||cloudads.indosatooredoo.com^
-||discovery.indosatooredoo.com^
 ||moengage.im3.id^
+||p-ads.indosatooredoo.com^
 ||web-ads.indosatooredoo.com^
-! --- Domain integrasi IOH ---
-||ads.ioh.co.id^
-||analytics.ioh.co.id^
-! --- Tambahan Backend & Campaign ---
+||tracking.indosatooredoo.com^
+||analytics.indosatooredoo.com^
+||events.indosatooredoo.com^
+||notification.indosatooredoo.com^
 ||campaign.indosatooredoo.com^
 ||offers.indosatooredoo.com^
 ||promos.indosatooredoo.com^
-! Analytics & Engagement (Pihak Ketiga yang dipakai IOH)
-||api.clevertap.com^
-||wzrkt.com^
-! --- IOH Technical & Event Tracking ---
-||events.indosatooredoo.com^
-||notification.indosatooredoo.com^
-||internal-ads.im3.id^
-||static.im3.id^$image,domain=im3.id
-! --- Third-Party Ad-Tech for IOH ---
+||discovery.indosatooredoo.com^
+||ads.ioh.co.id^
+||analytics.ioh.co.id^
+
+! ================================
+! XL AXIATA & AXIS – ADS + TRACKING + PROMO
+! ================================
+||ads.xl.co.id^
+||ads.xlaxiata.co.id^
+||mads.xl.co.id^
+||adserver.xl.co.id^
+||tracking.xl.co.id^
+||analytics.xl.co.id^
+||log.xl.co.id^
+||event.xl.co.id^
+||collector.xl.co.id^
+||campaign.xl.co.id^
+||promo.xl.co.id^
+||offers.xl.co.id^
+||discover.xl.co.id^
+||ads.axis.co.id^
+||tracking.axis.co.id^
+||analytics.axis.co.id^
+||ibnads.xl.co.id^
+
+! ================================
+! GLOBAL TRACKING (AGGRESSIVE)
+! ================================
+||appier.net^
+||adjust.com^
+||adjust.io^
 ||app-measurement.com^
 ||firebase-settings.crashlytics.com^
 ||settings.crashlytics.com^
-! --- IOH Static Content & Assets ---
-||static.indosatooredoo.com^
-||resources.indosatooredoo.com^
-||cdn.im3.id^
-! --- IOH New Corporate & API ---
-||api.ioh.co.id^
-||m.im3.id^
-||selfcare.indosatooredoo.com^
-! --- Anti-DNS Bypass ---
-||doh.indosatooredoo.com^
-
-! --- Global Trackers often used in ID ---
+||api.clevertap.com^
+||wzrkt.com^
 ||scorecardresearch.com^
 ||quantserve.com^
 ||mparticle.com^
 
+! ================================
+! BIG TECH TRACKING (HARD BLOCK)
+! ================================
+||googleads.g.doubleclick.net^
+||analytics.google.com^
+||firebaseinstallations.googleapis.com^
+||connect.facebook.net^
+||graph.facebook.com^$domain=~facebook.com|~instagram.com|~whatsapp.com
+
+! ================================
+! EXTRA ANTI-TRACKING (HARDCORE)
+! ================================
+||track.aptitudemedia.co^
+||track.zerofriend.com^
+||trackingclick.net^
+||traffic-monetizer.com^
+||trafficfactory.biz^
+
+! ================================
+! END OF IRUDINI LIST
+! ================================
+
 !
-! ----- TAMBAHAN LAIN : ABPindo -----
+! ----- TAMBAHAN : ABPindo -----
 ! ----- https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/aghome.txt -----
 !
 ||188affiliates.com^
@@ -135,7 +155,6 @@
 ||gudangbanner.com^
 ||halal.ad^
 ||hitadsmedia.com^
-||ibnads.xl.co.id^
 ||iklan-laris.com^
 ||iklanads.com^
 ||iklanbarisgratis.com^
@@ -217,9 +236,4 @@
 ||yllix.com^
 ||c-stat.eu^
 ||moneyfree.co^
-||track.aptitudemedia.co^
-||track.zerofriend.com^
 ||tracker.lazada.co.id^
-||trackingclick.net^
-||traffic-monetizer.com^
-||trafficfactory.biz^

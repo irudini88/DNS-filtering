@@ -1,0 +1,13 @@
+# Blocklist for DNS Filtering
+
+# Evil Domains
+example.com
+malicious.com
+ad.doubleclick.net
+track.example.org
+malware.com
+phishing.org
+
+# Advertising Domains
+ads.example.com
+static.ads.example.net

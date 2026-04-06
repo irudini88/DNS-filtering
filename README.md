@@ -54,7 +54,7 @@ Daftar ini disusun secara modular untuk memudahkan manajemen:
 4.  Masukkan konfigurasi berikut:
 
     * **Name:** `IRUDINI DNS Filter`
-    * **URL:** `https://raw.githubusercontent.com/irudini88/DNS-filtering/main/IRUDINI_v4.txt`
+    * **URL:** `https://raw.githubusercontent.com/irudini88/DNS-filtering/main/IRUDINI_v1.txt`
 
 5.  Klik **Save** ✅.
 

@@ -1,41 +1,101 @@
-# IRUDINI Custom Blocklist 🛡️
+# 🛡️ IRUDINI DNS Filter
 
-**IRUDINI Custom Blocklist** adalah daftar filter DNS kustom yang dirancang khusus untuk memblokir iklan operator seluler (Telkomsel & Indosat/IOH), pelacak perilaku (*trackers*), dan telemetri di Indonesia. Daftar ini dioptimalkan untuk penggunaan pada **AdGuard Home**, **Pi-hole**, atau aplikasi **AdGuard** (Android/iOS/Windows).
+**IRUDINI DNS Filter** adalah *blocklist* DNS kustom yang dirancang khusus untuk mengembalikan privasi pengguna internet di Indonesia dengan memblokir gangguan di level jaringan.
 
-## 🚀 Fitur Utama
-* **Anti-Operator Ads**: Memblokir injeksi iklan, pop-up, dan banner dari Telkomsel dan Indosat Ooredoo Hutchison (IOH).
-* **Privacy Focused**: Menutup celah pelacakan dari pihak ketiga seperti CleverTap, MoEngage, Adjust, dan Appier yang sering tertanam di aplikasi operator.
-* **Clean Experience**: Menghilangkan elemen promosi yang mengganggu di dalam aplikasi MyTelkomsel dan myIM3.
-* **High Compatibility**: Menggunakan sintaks standar AdGuard DNS yang kompatibel dengan berbagai penyaring DNS modern.
+### Fokus Utama:
+* 🔥 **ISP Ad Blocking**: Mematikan iklan injeksi dan promosi operator.
+* 🧠 **Privacy First**: Menghentikan *tracking* & telemetri aplikasi.
+* 🚫 **Clean UI**: Menghilangkan *banner* promo & *campaign* yang mengganggu.
+* 🔒 **Hardened Network**: Meningkatkan keamanan privasi seluruh perangkat.
 
-## 📋 Cara Pemasangan
+---
 
-### 1. Menggunakan AdGuard Home (Rekomendasi)
-1.  Buka Dashboard **AdGuard Home** Anda.
-2.  Masuk ke menu **Filters** > **DNS blocklists**.
-3.  Klik tombol **Add blocklist** > **Add a custom list**.
-4.  Masukkan nama: `IRUDINI Custom Blocklist`.
-5.  Masukkan URL Raw berikut:
+# 🚀 Fitur Utama
+
+### 📡 Aggressive ISP Ad Blocking
+Memblokir infrastruktur periklanan dari operator besar di Indonesia:
+* **Telkomsel** (MyTelkomsel, by.U)
+* **Indosat Ooredoo Hutchison** (IM3, IOH)
+* **XL Axiata & AXIS**
+
+> **Cakupan:** *Injected ads* dari ISP, *In-app ads*, serta *Banner & Pop-up* promosi.
+
+### 🧠 Advanced Tracking Protection
+Menutup celah pengumpulan data oleh:
+* **SDK Tracking**: Adjust, Appier, CleverTap, MoEngage, dll.
+* **Endpoint Analytics**: Jalur pengiriman data perilaku pengguna milik operator.
+* **Behavioral Tracking**: Pemantauan aktivitas klik dan preferensi.
+
+### 🌍 Global Tracking & Telemetry
+Perlindungan tambahan terhadap pelacak global:
+* Google Analytics & Ads.
+* Facebook Tracking & Firebase Telemetry.
+* *Monetization networks* & *Redirect networks*.
+
+---
+
+# 🏗️ Struktur Filter
+
+Daftar ini disusun secara modular untuk memudahkan manajemen:
+1.  **ISP Indonesia**: Domain spesifik Telkomsel, by.U, Indosat, dan XL/AXIS.
+2.  **Tracking & Analytics**: Pemutusan jalur SDK pihak ketiga dan internal ISP.
+3.  **Lokal Integrasi**: Menggabungkan kecerdasan filter dari komunitas ABPindo.
+4.  **Extra Hardcore**: Pemblokiran *click tracker* dan domain monetisasi.
+
+---
+
+# 📦 Instalasi
+
+## 🟢 AdGuard Home (Direkomendasikan)
+
+1.  Buka Dashboard **AdGuard Home**.
+2.  Navigasi ke menu: `Filters` → `DNS blocklists`.
+3.  Klik tombol: `Add blocklist` → `Add a custom list`.
+4.  Masukkan konfigurasi berikut:
+
+    * **Name:** `IRUDINI DNS Filter`
+    * **URL:** `https://raw.githubusercontent.com/irudini88/DNS-filtering/main/IRUDINI_v4.txt`
+
+5.  Klik **Save** ✅.
+
+---
+
+## 📱 AdGuard Apps (Android/iOS)
+
+1.  Buka **Settings** → **Content Blocking**.
+2.  Pilih **Filters** → **Custom**.
+3.  Tambahkan URL Raw di atas dan klik **Subscribe**.
+
+---
+
+# ⚠️ Catatan Penting
+
+### 🔴 Mode Aggressive
+Karena filter ini bekerja secara agresif, Anda mungkin akan menemui:
+* Banner promo di aplikasi MyTelkomsel/myIM3 hilang (kotak kosong).
+* Rekomendasi paket "khusus untukmu" mungkin tidak muncul.
+* Beberapa fitur *reward* berbasis iklan tidak dapat diakses.
+
+### 🟢 Cara Mengatasi Error (False Positive)
+Jika ada fitur aplikasi yang tidak berfungsi, gunakan **Query Log** di AdGuard:
+1.  Cari domain dengan status **Blocked** saat Anda membuka aplikasi.
+2.  Jika domain tersebut penting (seperti jalur login), tambahkan aturan pengecualian:
     ```text
-    [https://raw.githubusercontent.com/irudini88/DNS-filtering/main/IRUDINI_v1.txt](https://raw.githubusercontent.com/irudini88/DNS-filtering/main/IRUDINI_v1.txt)
+    @@||domain-penting.com^
     ```
-6.  Klik **Save**.
 
-### 2. Menggunakan Aplikasi AdGuard (Android/iOS)
-1.  Buka **Settings** > **Content Blocking** > **Filters**.
-2.  Pilih **Custom filters** > **Add custom filter**.
-3.  Tempelkan URL Raw di atas dan klik **Subscribe**.
+---
 
-## 🛠️ Struktur Filter
-Daftar ini mencakup beberapa kategori utama:
-* **Telkomsel Advanced**: Domain iklan, API marketing, dan sistem injeksi tsel.me.
-* **Indosat/IOH Extended**: Domain iklan im3, analytics moengage, dan infrastruktur IOH terbaru.
-* **Third-Party Trackers**: SDK pelacak yang digunakan oleh operator untuk profil pengguna.
-* **Global Trackers**: Pelacak umum yang sering muncul pada lalu lintas data di Indonesia.
+# 🔒 Advanced Setup
+Untuk hasil maksimal, jalankan AdGuard Home pada server **Debian** dan hubungkan melalui **Tailscale Exit Node**. Gunakan *firewall enforcement* agar semua trafik DNS dipaksa melewati AdGuard (Anti-Bypass).
 
-## ⚠️ Catatan Penting
-* **Clear Cache**: Setelah memasang filter ini, sangat disarankan untuk melakukan *Clear Cache* pada aplikasi MyTelkomsel atau myIM3 agar iklan lama yang tersimpan hilang.
-* **Whitelist**: Jika Anda mengalami kendala saat login atau melakukan pembayaran, tambahkan pengecualian (`@@`) pada domain terkait di daftar aturan pengguna Anda.
+> 🔥 **Misi:** *"Internet bersih tanpa intervensi ISP di Indonesia"*
 
-## 🔄 Pembaruan
-Daftar ini diperbarui secara berkala. Dengan instruksi `Checkperiod: 1d` di dalam file, sistem Anda akan otomatis mengambil pembaruan setiap 24 jam.
+---
+
+# 🤝 Kontribusi & Dukungan
+Ditemukan domain iklan baru atau *false positive*? Silakan ajukan melalui **Pull Request** atau **Issue**. 
+
+Jika proyek ini membantu Anda, jangan lupa berikan ⭐ di repository ini!
+
+**Author:** [IRUDINI Project](https://github.com/irudini88)

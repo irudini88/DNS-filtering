@@ -1,0 +1,19 @@
+# Title: IRUDINI - Minimalist Facebook Ads & Tracking
+# Description: Fokus pada domain iklan, pixel, dan telemetri Facebook.
+||ads.facebook.com^
+||ads.facebook.net^
+||advertising.facebook.com^
+||an.facebook.com^
+||an.facebook.net^
+||analytics.facebook.com^
+||business.facebook.com^
+||connect.facebook.net^
+||creative.facebook.com^
+||facebook-marketing.com^
+||graph.facebook.com^
+||pixel.facebook.com^
+||pixel.facebook.net^
+||stats.facebook.com^
+||tr.facebook.com^
+||tr.fb.com^
+||w-ads.facebook.com^

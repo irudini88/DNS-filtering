@@ -1,5 +1,6 @@
 # Title: IRUDINI - Minimalist TikTok Ads & Tracking
-# Target: Fokus pada domain iklan, analytics, dan telemetri TikTok.
+# Description: Fokus pada domain iklan, analytics, dan telemetri TikTok.
+# Last modified: 2026-04-07
 ||ads-eu.tiktok.com^
 ||ads-in.tiktok.com^
 ||ads-sg.tiktok.com^

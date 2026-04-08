@@ -1,20 +1,50 @@
-# Title: IRUDINI - Minimalist Facebook Ads & Tracking
-# Description: Fokus pada domain iklan, pixel, dan telemetri Facebook.
-# Last modified: 2026-04-07
+! Title: IRUDINI - Facebook Blocklist
+! Description: Blocklist untuk Iklan, Tracking, dan Analytics Facebook.
+! Version: 1.0.1
+! Last Modified: 2026-04-08
+! Expires: 28 days
+! Homepage: https://github.com/irudini88/DNS-filtering
+! License: https://opensource.org/licenses/MIT
+
+! --------------------------------------------------
+! Iklan & Delivery
+! --------------------------------------------------
+||ads-api.facebook.com^
 ||ads.facebook.com^
 ||ads.facebook.net^
+||ads.graph.facebook.com^
+||w-ads.facebook.com^
 ||advertising.facebook.com^
 ||an.facebook.com^
 ||an.facebook.net^
-||analytics.facebook.com^
-||business.facebook.com^
-||connect.facebook.net^
-||creative.facebook.com^
-||facebook-marketing.com^
-||graph.facebook.com^
+
+! --------------------------------------------------
+! Tracking & Pixel
+! --------------------------------------------------
 ||pixel.facebook.com^
 ||pixel.facebook.net^
-||stats.facebook.com^
 ||tr.facebook.com^
 ||tr.fb.com^
-||w-ads.facebook.com^
+||tracking.facebook.com^
+||l.facebook.com^
+||l.fb.com^
+
+! --------------------------------------------------
+! Analytics & Business Tools
+! --------------------------------------------------
+||analytics.facebook.com^
+||stats.facebook.com^
+||business.facebook.com^
+||creative.facebook.com^
+||facebook-marketing.com^
+
+! --------------------------------------------------
+! SDK Pihak Ketiga
+! --------------------------------------------------
+||connect.facebook.net^
+||staticxx.facebook.com^
+
+! --------------------------------------------------
+! Domain Lain
+! --------------------------------------------------
+||fb.com^

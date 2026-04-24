@@ -1,0 +1,75 @@
+! Title: IRUDINI - Disable Windows Update & Bloatware
+! Description: Blokir Windows Update, Delivery Optimization, Copilot, News, Weather, dan DoH bypass.
+! Version: 1.2
+! Last modified: 2026-04-25
+! Homepage: https://github.com/irudini88/DNS-filtering
+! License: MIT License
+!
+! Copyright (c) 2026 Irudini
+!
+! Permission is hereby granted, free of charge, to any person obtaining a copy
+! of this software and associated documentation files (the "Software"), to deal
+! in the Software without restriction, including without limitation the rights
+! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+! copies of the Software, and to permit persons to whom the Software is
+! furnished to do so, subject to the following conditions:
+!
+! The above copyright notice and this permission notice shall be included in all
+! copies or substantial portions of the Software.
+
+! --- Root & Wildcard Domains (Efisiensi Subdomain) ---
+||delivery.mp.microsoft.com^
+||update.microsoft.com^
+||windowsupdate.com^
+||windowsupdate.microsoft.com^
+||mp.microsoft.com^
+
+! --- Copilot & AI Services ---
+||copilot.microsoft.com^
+||bing.com/chat^
+||sydney.bing.com^
+||edgeservices.bing.com^
+
+! --- News, Weather & Widgets ---
+||weather.microsoft.com^
+||msn.com^
+||assets.msn.com^
+||widgets.msn.com^
+||edge.microsoft.com^
+
+! --- Download & Metadata (Prioritas Tinggi) ---
+||3.au.download.windowsupdate.com^$important
+||ctldl.windowsupdate.com^$important
+||download.windowsupdate.com^$important
+||fe2cr.update.microsoft.com^$important
+||sls.update.microsoft.com^
+||slscr.update.microsoft.com^
+||umc.microsoft.com^
+
+! --- Services & Handshake ---
+||atl-atl-conn-001.microsoft.com^
+||client-s.gateway.messenger.live.com^
+||client.wns.windows.com^
+||displaycatalog.mp.microsoft.com^
+||dmd.metaservices.microsoft.com^
+||download.microsoft.com^
+||emdl.ws.microsoft.com^
+||g.live.com^
+||licensing.mp.microsoft.com^
+||msedge.api.cdp.microsoft.com^
+||ntservicepack.microsoft.com^
+||oneocsp.microsoft.com^
+||purchase.mp.microsoft.com^
+||redir.metaservices.microsoft.com^
+||statsfe2.ws.microsoft.com^
+||tsfe.trafficshaping.dsp.mp.microsoft.com^
+||wustat.windows.com^
+||s0.20td.com^
+
+! --- Telemetry & Tracking ---
+||v10.events.data.microsoft.com^
+||v20.events.data.microsoft.com^
+||v10.vortex-win.data.microsoft.com^
+
+! --- Anti-Bypass (DNS-over-HTTPS) ---
+||doh.pub.connectivity.microsoft.com^
